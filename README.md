@@ -2,11 +2,14 @@
 
 ## About
 
-This container is a minimalistic environment for running [Neovim](https://github.com/neovim/neovim). It is based on [mini.nvim](https://github.com/echasnovski/mini.nvim) package. For configuring your neovim edit ``config/init.lua``. It already enables ``mini.completions`` and configures ``ruff`` and ``pyright`` language servers. 
+This container is a minimalistic environment for running [Neovim](https://github.com/neovim/neovim). 
+It is based on [mini.nvim](https://github.com/echasnovski/mini.nvim) package. 
+For configuring your neovim edit ``config/init.lua``. It already enables ``mini.completions`` and configures ``ruff`` and ``pyright`` language servers. 
 
 ## Requirements
 
- - podman
+ - ``podman`` on the host
+ - ``nvim_dic`` images won't work on ``musl`` systems, so it will not work on base *alpine* linux.
 
 ## Usage
 

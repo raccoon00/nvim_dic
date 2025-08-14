@@ -1,4 +1,5 @@
 FROM docker.io/library/debian:bookworm-slim AS builder
+LABEL org.opencontainers.image.source https://github.com/raccoon00/nvim_dic
 
 # Installing curl, tar and git
 RUN apt update && \
