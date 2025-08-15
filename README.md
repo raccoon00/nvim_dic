@@ -13,7 +13,11 @@ For configuring your neovim edit ``config/init.lua``. It already enables ``mini.
 
 ## Usage
 
+In your ``Dockerfile``:
+
+```dockerfile
 COPY --from=ghcr.io/raccoon00/nvim_dic:11.3 /nvim /nvim
+```
 
 In the container's shell run
 
