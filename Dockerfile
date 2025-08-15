@@ -1,5 +1,4 @@
 FROM docker.io/library/debian:bookworm-slim AS builder
-LABEL org.opencontainers.image.source https://github.com/raccoon00/nvim_dic
 
 # Installing curl, tar and git
 RUN apt update && \
@@ -28,6 +27,11 @@ RUN cd /tmp && \
 CMD ["/bin/sh"]
 
 FROM scratch as final
+LABEL org.opencontainers.image.source=https://github.com/raccoon00/nvim_dic
+LABEL org.opencontainers.image.description="Minimalistic Neovim image, containing only Neovim binaries, runtime environment and mini.nvim package"
+LABEL org.opencontainers.image.licenses=MIT
+
 
 COPY --from=builder /nvim /nvim
+
 

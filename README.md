@@ -13,6 +13,14 @@ For configuring your neovim edit ``config/init.lua``. It already enables ``mini.
 
 ## Usage
 
+COPY --from=ghcr.io/raccoon00/nvim_dic:11.3 /nvim /nvim
+
+In the container's shell run
+
+```sh
+# XDG_CONFIG_HOME=/nvim/config /nvim/bin/nvim [YOURFILE/DIRECTORY]
+```
+
 ## Testing your changes
 
 Run the ``dev_nvim.sh`` script for quick testing of changes in this ``Dockerfile`` or in ``config/init.lua``
