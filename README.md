@@ -8,7 +8,7 @@ For configuring your neovim edit ``config/init.lua``. It already enables ``mini.
 
 ## Requirements
 
- - ``podman`` on the host
+ - ``podman`` on the host. You should **not** use ``docker``, because it uses root access to run its containers and building this image downloads 3rd party binaries and code, that can potentially be malicious.
  - ``nvim_dic`` images won't work on ``musl`` systems, so it will not work on base *alpine* linux.
 
 ## Usage
@@ -25,7 +25,14 @@ In the container's shell run
 XDG_CONFIG_HOME=/nvim/config /nvim/bin/nvim [YOURFILE/DIRECTORY]
 ```
 
-## Testing your changes
+## Customizing your Neovim
+
+Change ``config/init.lua`` file. 
+Use [mini.nvim](https://github.com/echasnovski/mini.nvim) documentation for customizing the behavior of its plugins.
+You can add your plugins the same way as mini.nvim was added, check the ``Dockerfile`` to see how.
 
 Run the ``dev_nvim.sh`` script for quick testing of changes in this ``Dockerfile`` or in ``config/init.lua``
+
+The usage of any plugin managers is not recommended, because of potential security risks for your system.
+
 
