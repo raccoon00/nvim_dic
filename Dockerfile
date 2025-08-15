@@ -26,7 +26,7 @@ RUN cd /tmp && \
     mv /tmp/mini.nvim "$VIM_PACK_DIR/mini.nvim"
 CMD ["/bin/sh"]
 
-FROM scratch as final
+FROM scratch AS final
 LABEL org.opencontainers.image.source=https://github.com/raccoon00/nvim_dic
 LABEL org.opencontainers.image.description="Minimalistic Neovim image, containing only Neovim binaries, runtime environment and mini.nvim package"
 LABEL org.opencontainers.image.licenses=MIT
