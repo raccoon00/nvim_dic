@@ -8,8 +8,8 @@ For configuring your neovim edit ``config/init.lua``. It already enables ``mini.
 
 ## Requirements
 
- - ``podman`` on the host. You should **not** use ``docker``, because it uses root access to run its containers and building this image downloads 3rd party binaries and code, that can potentially be malicious.
- - ``nvim_dic`` images won't work on ``musl`` systems, so it will not work on base *alpine* linux.
+ - ``podman`` on the host
+ - ``nvim_dic`` images won't work on ``musl`` systems, so it will not work on base *alpine* linux
 
 ## Usage
 
